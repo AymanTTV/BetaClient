@@ -60,8 +60,8 @@ export default function Qurxis() {
             {typedText}
           </p>
         </div>
-        <p className='md:text-2xl text-xl font-bold text-gray-500'>Kireyso guri laga soo shaqeeyay</p>
-        <button className='bg-[#00df9a] w-[200px] rounded-md font-medium my-6 mx-auto py-3 text-black'>Houses & Home</button>
+        <p className='md:text-2xl text-xl font-bold text-gray-500'>BetaHouse Waa company kuu fududeeyay kireynata Guriyaha</p>
+        <button className='bg-[#00df9a] w-[200px] rounded-md font-medium my-6 mx-auto py-3 text-black'> Know more</button>
       </div>
     </div>
   );
