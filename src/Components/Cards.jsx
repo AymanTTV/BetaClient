@@ -7,7 +7,7 @@ export default function Cards(){
   return (
     
     <div className='w-full py-[10rem] px-4 bg-white'>
-        <div className='mt-0 mb-20'><h1 className="w-full text-3xl font-bold text-[#00df98] text-center mt-0">Houses Prices</h1></div>
+        <div className='mt-0 mb-20 bg-white'><h1 className="w-full text-3xl font-bold text-[#00df98] text-center mt-0">Houses Prices</h1></div>
       <div className='max-w-[1240px] mx-auto grid md:grid-cols-3 gap-8'>
           <div className='w-full shadow-xl flex flex-col p-4 my-4 rounded-lg hover:scale-105 duration-300'>
               <img className='w-20 mx-auto mt-[-3rem] bg-white' src={Single} alt="/" />
