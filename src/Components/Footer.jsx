@@ -17,8 +17,8 @@ export default function Footer() {
           <FaFacebookSquare size={30} />
           <FaInstagram size={30} />
           <FaTwitterSquare size={30} />
-          <FaGithubSquare size={30} />
-          <FaDribbbleSquare size={30} />
+          {/* <FaGithubSquare size={30} />
+          <FaDribbbleSquare size={30} /> */}
         </div>
       </div>
       <div className='lg:col-span-2 flex justify-left mt-6'>

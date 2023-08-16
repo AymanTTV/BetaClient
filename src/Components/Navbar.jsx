@@ -26,6 +26,12 @@ export default function Navbar(){
                 </li>
             </ul>
 
+            {/* Login and Sign Up buttons */}
+        <div className='hidden md:flex space-x-4'>
+          <button className='px-4 py-2 text-white border rounded'>Login</button>
+          <button className='px-4 py-2 bg-[#00df9a] rounded-md text-black'>Sign Up</button>
+        </div>
+
             <div onClick={handleNav} className='block md:hidden'>
           {nav ? <AiOutlineClose size={20}/> : <AiOutlineMenu size={20} />}
       </div>
@@ -44,6 +50,12 @@ export default function Navbar(){
                 <li className="p-4 border-b border-gray-600">
                     Contact
                 </li>
+
+                 {/* Mobile Login and Sign Up buttons */}
+        <div className='flex flex-col items-center space-y-4 mt-4'>
+          <button className='px-4 py-2 text-white border rounded'>Login</button>
+          <button className='px-4 py-2 bg-[#00df9a] rounded text-black'>Sign Up</button>
+        </div>
         </ul>
       </div>
         </>
