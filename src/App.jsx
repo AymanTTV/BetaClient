@@ -1,24 +1,32 @@
+import React from 'react';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'; // Import BrowserRouter, Route, and Routes
+import Home from './Pages/Home'
+import Navbar from './Components/Navbar';
+import Footer from './Components/Footer';
+import About from './Pages/About';
+import HouseType from './Pages/HouseType';
+import Contact from './Pages/Contact';
+import Signup from './Pages/Signup';
+import Login from './Pages/Login';
 
-import React from "react";
-import Navbar from "./Components/Navbar";
-import Qurxis from "./Components/Qurxis";
-import Footer from "./Components/Footer";
-import HomesSection from "./Components/HomeSection";
-import Newsletter from "./Components/Newsletter";
-import Cards from "./Components/Cards";
 function App() {
-  
-
   return (
     <>
-      <Navbar />
-      <Qurxis />
-      <HomesSection />
-      <Newsletter />
-      <Cards />
-      <Footer />
+    
+     <Router> {/* Wrap your App component with the Router */}
+       <Routes>
+         <Route path="/" element={<Home />} />
+           <Route path="about" element={<About />} />
+           <Route path="housetype" element={<HouseType />} />
+           <Route path="contact" element={<Contact />} />
+           <Route path="signup" element={<Signup />} />
+           <Route path="login" element={<Login />} />
+         
+       </Routes>
+     </Router>
+
     </>
-  )
+  );
 }
 
-export default App
+export default App;

@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom'; // Import the Link component from your routing library
 
 export default function Qurxis() {
   const [typedText, setTypedText] = useState('');
@@ -61,7 +62,11 @@ export default function Qurxis() {
           </p>
         </div>
         <p className='md:text-2xl text-xl font-bold text-gray-500'>BetaHouse Waa company kuu fududeeyay kireynata Guriyaha</p>
-        <button className='bg-[#00df9a] w-[200px] rounded-md font-medium my-6 mx-auto py-3 text-black'> Know more</button>
+        <Link to="/about">
+        <button className="bg-[#00df9a] w-[200px] rounded-md font-medium my-6 mx-auto py-3 text-black">
+          Know more
+        </button>
+      </Link>
       </div>
     </div>
   );

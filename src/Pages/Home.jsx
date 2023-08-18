@@ -1,19 +1,22 @@
 import React from "react";
-import Navbar from "./Navbar";
-import Footer from "./Footer";
+import Navbar from "../Components/Navbar";
+import Qurxis from "../Components/Qurxis";
+import Footer from "../Components/Footer";
+import HomesSection from "../Components/HomeSection";
+import Newsletter from "../Components/Newsletter";
+import Cards from "../Components/Cards";
+
 
 
 export default function Home(){
     return(
         <>
-        <Navbar />
-
-        <div className='mt-0 mb-20 bg-white'><h1 className="w-full text-3xl font-bold text-[#00df98] text-center mt-0"> Home Page</h1></div>
-
-
-
-
-        <Footer />
+      <Navbar />
+      <Qurxis />
+      <HomesSection />
+      <Newsletter />
+      <Cards />
+      <Footer />
         </>
     )
 }
