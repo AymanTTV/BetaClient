@@ -2,7 +2,8 @@ import React, {useContext}from 'react';
 import { HouseContext  } from './HouseContext';
 import House from './House'
 import { Link } from 'react-router-dom';
-import {ImSpinner2} from 'react-icons/im'
+import {ImSpinner2} from 'react-icons/im';
+
 export default function HouseList(){
   const {houses, loading} = useContext(HouseContext)
   
