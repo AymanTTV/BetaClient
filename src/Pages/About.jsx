@@ -21,10 +21,7 @@ export default function About() {
                 Welcome to BetaHouse - Your Real Estate Partner in Mogadishu, Somalia
               </h2>
               <p className="mt-6 text-gray-600">
-                BetaHouse is a premier real estate company based in Mogadishu, Somalia. Lorem ipsum
-                dolor sit amet consectetur adipisicing elit. Eum omnis voluptatem accusantium nemo
-                perspiciatis delectus atque autem! Voluptatum tenetur beatae unde aperiam, repellat
-                expedita consequatur! Officiis id consequatur atque doloremque!
+                BetaHouse is a premier real estate company based in Mogadishu, Somalia.
               </p>
               <p className="mt-4 text-gray-600">
                 Our dedicated team of passionate developers and professionals are committed to
@@ -104,7 +101,7 @@ export default function About() {
             </h2>
           </div>
           <p className="mt-6 text-gray-300 text-center">
-            BetaHouse was founded in [Year] with a vision to transform the real estate landscape in
+            BetaHouse was founded in [2023] with a vision to transform the real estate landscape in
             Mogadishu. Our journey began with a commitment to excellence, innovation, and customer
             satisfaction. Over the years, we have grown into a trusted partner for those seeking
             exceptional real estate solutions.

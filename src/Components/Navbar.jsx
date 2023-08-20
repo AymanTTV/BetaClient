@@ -30,8 +30,8 @@ export default function Navbar() {
 
         {/* Login and Sign Up buttons */}
         <div className='hidden md:flex space-x-4'>
-          <button className='px-4 py-2 text-white border rounded'>Login</button>
-          <button className='px-4 py-2 bg-[#00df9a] rounded-md text-black'>Sign Up</button>
+        <Link to="/login">   <button className='px-4 py-2 text-white border rounded'>Login</button> </Link>
+        <Link to="/signup">  <button className='px-4 py-2 bg-[#00df9a] rounded-md text-black'>Sign Up</button></Link>
         </div>
 
         <div onClick={handleNav} className='block md:hidden'>
@@ -55,8 +55,8 @@ export default function Navbar() {
 
           {/* Mobile Login and Sign Up buttons */}
           <div className='flex flex-col items-center space-y-4 mt-4'>
-            <button className='px-4 py-2 text-white border rounded'>Login</button>
-            <button className='px-4 py-2 bg-[#00df9a] rounded text-black'>Sign Up</button>
+          <Link to="/login"> <button className='px-4 py-2 text-white border rounded'>Login</button> </Link>
+           <Link to="/signup"> <button className='px-4 py-2 bg-[#00df9a] rounded text-black'>Sign Up</button></Link>
           </div>
         </ul>
       </div>

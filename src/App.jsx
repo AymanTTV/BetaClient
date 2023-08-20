@@ -8,7 +8,7 @@ import HouseType from './Pages/HouseType';
 import Contact from './Pages/Contact';
 import Signup from './Pages/Signup';
 import Login from './Pages/Login';
-
+import PropertyDetails from './Pages/PropertyDetails';
 function App() {
   return (
     <>
@@ -21,7 +21,7 @@ function App() {
            <Route path="contact" element={<Contact />} />
            <Route path="signup" element={<Signup />} />
            <Route path="login" element={<Login />} />
-         
+           <Route path='/property/:id' element= { <PropertyDetails /> } />
        </Routes>
      </Router>
 
