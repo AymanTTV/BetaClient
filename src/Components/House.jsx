@@ -7,7 +7,7 @@ export default function House({house}){
       <img src={image} alt="" className='mb-8'/>
       <div className='mb-4 flex gap-x-2 text-sm'>
         <div className='bg-green-500 rounded text-white px-3'>{type}</div>
-        <div className='bg-blue-500 rounded text-white px-3'>{country}</div>
+        <div className='bg-[#0e140f] rounded text-white px-3'>{country}</div>
       </div>
       <div className='text-lg max-w-[280px]'>
         {address}
