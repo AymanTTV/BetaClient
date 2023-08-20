@@ -8,7 +8,7 @@ export default function Login(){
         <>
         <Navbar />
 
-        <div className='mt-0 mb-20 bg-white'><h1 className="w-full text-3xl font-bold text-[#00df98] text-center mt-0"> Login Page</h1></div>
+        <div className='mt-0 mb-20 '><h1 className="w-full text-3xl font-bold text-[#00df98] text-center mt-0"> Login Page</h1></div>
 
 
 
