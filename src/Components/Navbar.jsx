@@ -26,12 +26,13 @@ export default function Navbar() {
           <li className="p-4">
             <Link to="/contact">Contact</Link>
           </li>
+          
         </ul>
 
         {/* Login and Sign Up buttons */}
         <div className='hidden md:flex space-x-4'>
         <Link to="/login">   <button className='px-4 py-2 text-white border rounded'>Login</button> </Link>
-        <Link to="/signup">  <button className='px-4 py-2 bg-[#00df9a] rounded-md text-black'>Sign Up</button></Link>
+        <Link to="/signup">  <button className='px-8 py-2 bg-[#00df9a] rounded-md text-black'>SignUp</button></Link>
         </div>
 
         <div onClick={handleNav} className='block md:hidden'>

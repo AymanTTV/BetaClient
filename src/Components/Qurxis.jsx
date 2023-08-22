@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom'; // Import the Link component from your routing library
+import BgImage from '../assets/House.jpeg';
 
 export default function Qurxis() {
   const [typedText, setTypedText] = useState('');
