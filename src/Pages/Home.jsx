@@ -5,7 +5,7 @@ import Footer from "../Components/Footer";
 import HomesSection from "../Components/HomeSection";
 import Newsletter from "../Components/Newsletter";
 import Cards from "../Components/Cards";
-
+import { Crousel } from "../Components/Crousel";
 
 
 export default function Home(){
@@ -16,7 +16,9 @@ export default function Home(){
       <HomesSection />
       <Newsletter />
       <Cards />
+      <Crousel />
       <Footer />
+      
         </>
     )
 }

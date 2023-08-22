@@ -2,18 +2,24 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import App from './App.jsx';
-import Search from '../src/Components/Search.jsx'; // Import your Search component
-import HouseContextProvider from '../src/Components/HouseContext.jsx'; // Import your HouseContextProvider component
+import Search from '../src/Components/Search.jsx';
+import HouseContextProvider from '../src/Components/HouseContext.jsx';
+import { QueryClient, QueryClientProvider } from 'react-query'; // Import QueryClient and QueryClientProvider
 import './index.css';
 
-// Render your application within the HouseContextProvider
+// Create a new instance of QueryClient
+const queryClient = new QueryClient();
+
+// Render your application within the HouseContextProvider and QueryClientProvider
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <HouseContextProvider>
-      <App>
-        <Search /> {/* Use the Search component here */}
+    <QueryClientProvider client={queryClient}>
+      <HouseContextProvider>
+        
+        <App />
+       
         {/* Other components */}
-      </App>
-    </HouseContextProvider>
+      </HouseContextProvider>
+    </QueryClientProvider>
   </React.StrictMode>
 );
