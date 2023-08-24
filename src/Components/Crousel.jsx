@@ -1,28 +1,75 @@
-import { Carousel, Typography, Button,  } from "@material-tailwind/react";
- 
-// Initialization for ES Users
+import React, { useState, useEffect } from "react";
+import { ChevronLeft, ChevronRight } from "react-feather";
 
+import House1 from '../assets/img/houses/house1.jpg';
+import House2 from '../assets/img/houses/house2.jpg';
+import House3 from '../assets/img/houses/house3.jpg';
 
-export function Crousel() {
+const slides = [
+  House1,
+  House2,
+  House3,
+];
 
-    return (
-        <Carousel transition={{ duration: 2 }} className="rounded-xl">
-          <img
-            src="https://images.unsplash.com/photo-1497436072909-60f360e1d4b1?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2560&q=80"
-            alt="image 1"
-            className="h-full w-full object-cover"
-          />
-          <img
-            src="https://images.unsplash.com/photo-1493246507139-91e8fad9978e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2940&q=80"
-            alt="image 2"
-            className="h-full w-full object-cover"
-          />
-          <img
-            src="https://images.unsplash.com/photo-1518623489648-a173ef7824f3?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2762&q=80"
-            alt="image 3"
-            className="h-full w-full object-cover"
-          />
-        </Carousel>
-      );
+export default function Crousel({
+  children: slidesProp, // Rename the parameter
+  autoSlide = false,
+  autoSlideInterval = 3000,
+}) {
+  const [curr, setCurr] = useState(0);
 
+  const prev = () =>
+    setCurr((curr) => (curr === 0 ? slides.length - 1 : curr - 1));
+  const next = () =>
+    setCurr((curr) => (curr === slides.length - 1 ? 0 : curr + 1));
+
+    useEffect(() => {
+      if (!autoSlide) return;
+      const slideInterval = setInterval(next, autoSlideInterval);
+      return () => clearInterval(slideInterval);
+    }, [autoSlide, next]); // Add `next` as a dependency
+    
+
+  return (
+    
+    <div className="w-96 mx-auto overflow-hidden relative">
+      <div
+        className="flex transition-transform ease-out duration-500"
+        style={{ transform: `translateX(-${curr * 100}%)` }}
+      >
+        {slides.map((slide, index) => (
+          <img key={index} src={slide} alt={`Slide ${index + 1}`} />
+        ))}
+      </div>
+      <div className="absolute inset-0 flex items-center justify-between p-4">
+        <button
+          onClick={prev}
+          className="p-1 rounded-full shadow bg-gray-300 text-gray-800 hover:bg-green-400"
+        >
+          <ChevronLeft size={40} />
+        </button>
+        <button
+          onClick={next}
+          className="p-1 rounded-full shadow bg-gray-300 text-gray-800 hover:bg-green-400"
+        >
+          <ChevronRight size={40} />
+        </button>
+      </div>
+
+      <div className="absolute bottom-4 right-0 left-0">
+        <div className="flex items-center justify-center gap-2">
+          {slides.map((_, i) => (
+            <div
+              key={i}
+              className={`
+              transition-all w-3 h-3 bg-gray-300 rounded-full
+              ${curr === i ? "p-2" : "bg-opacity-50"}
+            `}
+            />
+          ))}
+        </div>
+      </div>
+    </div>
+   
+  );
 }
