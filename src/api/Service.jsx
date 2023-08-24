@@ -3,7 +3,7 @@ import { api } from "../../apiConfig/Config";
 
 export const GetAllService = async()=>{
 
-    return await api.get("/services")
+    return await api.get("/service")
 }
 
 export const GetByIdService = async (id)=>{
