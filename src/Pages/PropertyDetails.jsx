@@ -64,7 +64,7 @@ export default function PropertyDetails(){
               </textarea>
               <div className='flex gap-x-2'>
                 <button className='bg-green-400 hover:bg-green-600 text-white rounded p-4 text-sm w-full transition'>Send message </button>
-                <button className='hover:text-green-600 text-green-400 border border-green-400 rounded p-4 text-sm w-full transition'>Call</button>
+                <a href="+252619443333"><button className='hover:text-green-600 text-green-400 border border-green-400 rounded p-4 text-sm w-full transition'>Call</button></a>
               </div>
             </form>
           </div>

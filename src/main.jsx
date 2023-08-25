@@ -15,8 +15,9 @@ ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     <QueryClientProvider client={queryClient}>
       <HouseContextProvider>
-        
-        <App />
+      
+            {/* Include the PermanentDrawerLeft component here */}
+            <App />
        
         {/* Other components */}
       </HouseContextProvider>
